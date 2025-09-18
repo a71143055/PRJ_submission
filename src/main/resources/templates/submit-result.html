@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>제출 결과</title>
+</head>
+<body>
+<h2>제출 완료!</h2>
+<p>제출 ID: <span th:text="${response.submissionId}"></span></p>
+<p>제출 시간: <span th:text="${response.submittedAt}"></span></p>
+<p>파일 경로: <span th:text="${response.fileUrl}"></span></p>
+<p>지각 여부: <span th:text="${response.isLate ? '지각 제출' : '정상 제출'}"></span></p>
+</body>
+</html>

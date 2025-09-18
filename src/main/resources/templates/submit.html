@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>과제 제출</title>
+</head>
+<body>
+<h2>과제 제출 폼</h2>
+
+<form th:action="@{/submissions/submit}" method="post" enctype="multipart/form-data">
+    <label>과제 ID:</label>
+    <input type="number" name="assignmentId" required><br><br>
+
+    <label>학생 ID:</label>
+    <input type="number" name="studentId" required><br><br>
+
+    <label>파일 업로드:</label>
+    <input type="file" name="file" required><br><br>
+
+    <button type="submit">제출하기</button>
+</form>
+
+<p th:if="${error}" th:text="${error}" style="color:red;"></p>
+</body>
+</html>
