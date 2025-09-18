@@ -35,8 +35,6 @@ public class SubmissionController {
             // 🔍 콘솔에 예외 메시지 출력
             System.err.println("제출 실패: " + e.getMessage());
             e.printStackTrace();
-
-            model.addAttribute("error", "제출 중 오류가 발생했습니다: " + e.getMessage());
             return "submit";
         }
     }
